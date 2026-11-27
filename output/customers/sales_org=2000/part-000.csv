@@ -1,0 +1,5 @@
+customer_id,name,sales_org,country,email,credit_limit
+C1003,Corelink Distribution,2000,DE,info@corelink.example,320000
+C1004,Delta Hardware Co,2000,US,sales@deltahardware.example,95000
+C1008,Harbor Lights Ltd,2000,GB,hello@harborlights.example,54000
+C1011,Kite & Anchor Marine,2000,US,orders@kiteanchor.example,88000
