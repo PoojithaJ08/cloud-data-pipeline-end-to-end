@@ -1,0 +1,4 @@
+customer_id,name,sales_org,country,email,credit_limit
+C1005,Everline Pharma Supply,3000,GB,contact@everline.example,410000
+C1007,Greenfield Apparel,3000,US,buying@greenfieldapparel.example,76000
+C1010,Juniper Health Systems,3000,US,supply@juniperhealth.example,265000
