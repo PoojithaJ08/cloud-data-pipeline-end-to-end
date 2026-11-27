@@ -1,0 +1,43 @@
+# dbt schema + tests (demonstration sample)
+# The tests below are the warehouse-native form of the validation rules in
+# this project: they run in the dbt build, so a bad extract fails the build
+# instead of quietly loading.
+
+version: 2
+
+sources:
+  - name: sap_extracts
+    description: Raw landed SAP-style extracts (bronze), loaded unchanged.
+    tables:
+      - name: customers_raw
+        description: Customer master extract, one row per source record.
+
+models:
+  - name: stg_customers
+    description: Cleansed, deduped customer staging — one row per customer_id.
+    columns:
+      - name: customer_id
+        description: Natural key of the customer master.
+        tests:
+          - unique
+          - not_null
+      - name: sales_org
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+
+  - name: mart_customer_master
+    description: Governed customer master for reporting — validated records only.
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: credit_limit
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
