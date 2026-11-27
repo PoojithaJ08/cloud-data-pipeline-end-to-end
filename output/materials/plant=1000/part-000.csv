@@ -1,0 +1,4 @@
+material_id,description,plant,material_group,base_uom,unit_price,currency
+M2001,Steel Bracket 40mm,1000,RAW,EA,4.25,USD
+M2002,Carton Box Large,1000,PACK,EA,1.10,USD
+M2006,Raw Polymer Pellets,1000,RAW,KG,2.75,USD
