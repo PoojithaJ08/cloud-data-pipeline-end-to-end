@@ -1,0 +1,13 @@
+material_id,description,plant,material_group,base_uom,unit_price,currency
+M2001,Steel Bracket 40mm,1000,RAW,EA,4.25,USD
+M2002,Carton Box Large,1000,PACK,EA,1.10,USD
+M2003,Finished Widget A,2000,FG,EA,58.90,USD
+M2004,Finished Widget B,2000,FG,EA,64.50,eur
+M2005,Spare Motor 2kW,3000,SPARE,EA,210.00,USD
+M2006,Raw Polymer Pellets,1000,RAW,KG,2.75,USD
+M2007,Label Roll Thermal,3000,PACK,EA,0.35,USD
+M2003,Finished Widget A,2000,FG,EA,58.90,USD
+M2008,Gasket Set Rubber,2000,,EA,6.80,USD
+M2009,Assembly Kit Deluxe,4000,FG,EA,-12.00,USD
+M2010,Cleaning Solvent 5L,3000,RAW,L,9.99,USD
+M2011,Display Stand Metal,4000,FG,EA,23.40,USD

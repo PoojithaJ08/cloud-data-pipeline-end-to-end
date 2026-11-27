@@ -1,0 +1,15 @@
+customer_id,name,sales_org,country,email,credit_limit
+C1001,Alpine Retail Group,1000,US,orders@alpineretail.example,250000
+C1002,Bayside Foods Inc,1000,US,ap@baysidefoods.example,180000
+C1003,Corelink Distribution,2000,DE,info@corelink.example,320000
+C1004,Delta Hardware Co,2000,US,sales@deltahardware.example,95000
+C1005,Everline Pharma Supply,3000,GB,contact@everline.example,410000
+C1006,FreshMart Stores,1000,US,,120000
+C1007,Greenfield Apparel,3000,US,buying@greenfieldapparel.example,76000
+C1008,Harbor Lights Ltd,2000,gb,hello@harborlights.example,54000
+C1009,IronPeak Manufacturing,4000,US,procurement@ironpeak.example,500000
+C1010,Juniper Health Systems,3000,US,supply@juniperhealth.example,265000
+C1002,Bayside Foods Inc,1000,US,ap@baysidefoods.example,180000
+C1011,Kite & Anchor Marine,2000,US,orders@kiteanchor.example,88000
+C1012,Lakeside Grocers,1000,US,not-an-email,143000
+C1013,Metro Office Supply,,US,orders@metrooffice.example,67000
