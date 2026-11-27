@@ -1,0 +1,3 @@
+order_id,customer_id,material_id,sales_org,quantity,order_date
+SO5007,C1009,M2005,4000,15,2026-10-05
+SO5016,C1009,M2003,4000,220,2026-10-10
