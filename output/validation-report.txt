@@ -1,0 +1,39 @@
+========================================================================
+END-TO-END PIPELINE RUN - customers / materials / sales_orders
+Stages: INGEST -> TRANSFORM/CLEANSE -> VALIDATE -> LOAD -> REPORT
+========================================================================
+
+[CUSTOMERS]
+  input rows:            14
+  duplicates removed:    1
+  rows rejected:         3
+    - failed rule: mandatory fields (customer_id, name, sales_org): 1
+    - failed rule: email present and valid format: 2
+  clean rows written:    10
+  reconciliation:        14 input = 1 duplicates + 3 rejected + 10 clean -> OK
+  partitions written (sales_org): 1000=2, 2000=4, 3000=3, 4000=1
+
+[MATERIALS]
+  input rows:            12
+  duplicates removed:    1
+  rows rejected:         2
+    - failed rule: mandatory fields (material_id, plant, material_group): 1
+    - failed rule: unit_price must be a positive number: 1
+  clean rows written:    9
+  reconciliation:        12 input = 1 duplicates + 2 rejected + 9 clean -> OK
+  partitions written (plant): 1000=3, 2000=2, 3000=3, 4000=1
+
+[SALES ORDERS]
+  input rows:            16
+  duplicates removed:    0
+  rows rejected:         4
+    - failed rule: mandatory fields (order_id, customer_id, material_id): 0
+    - failed rule: quantity must be positive: 1
+    - failed rule: customer_id must exist in cleansed customers: 1
+    - failed rule: material_id must exist in cleansed materials: 2
+  clean rows written:    12
+  reconciliation:        16 input = 0 duplicates + 4 rejected + 12 clean -> OK
+  partitions written (sales_org): 1000=3, 2000=3, 3000=4, 4000=2
+
+TOTAL: 42 input rows -> 31 clean rows written to partitioned output under output/
+Rejected rows are reported above per rule - in a live engagement they go back to the data owners in an error log for correction at source, never loaded silently.
