@@ -1,0 +1,4 @@
+material_id,description,plant,material_group,base_uom,unit_price,currency
+M2005,Spare Motor 2kW,3000,SPARE,EA,210.00,USD
+M2007,Label Roll Thermal,3000,PACK,EA,0.35,USD
+M2010,Cleaning Solvent 5L,3000,RAW,L,9.99,USD
